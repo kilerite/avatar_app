@@ -1,2 +1,9 @@
-<h1>Avatars#index</h1>
-<p>Find me in app/views/avatars/index.html.erb</p>
+# En la vista
+<h1>Mostrando todos los avatares</h1>
+<div class="row">
+  <% @avatars.each do |avatar| %>
+    <div class="col-md-4">
+      <%= image_tag avatar.url_image, class: "img-fluid" %>
+    </div>
+  <% end %>
+</div>
